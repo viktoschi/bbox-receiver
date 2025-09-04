@@ -11,6 +11,8 @@ docker run -itd --restart unless-stopped --name belabox-receiver \
  -p 8282:8282/udp \
  -v $(pwd)/config:/app belabox-receiver
 
+ docker buildx prune -a -f   
+
 # SLS stats page:
 # http://localhost:8181/stats
 #
